@@ -24,6 +24,6 @@ export const createUser = async (request, response) => {
 
     return response.status(201).json(user);
   } catch (error) {
-    return res.status(501).json({ message: "server internal error" });
+    return response.status(501).json({ message: "server internal error" });
   }
 };
