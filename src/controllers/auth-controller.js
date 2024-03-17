@@ -3,7 +3,7 @@ import { createUserSchema } from "../schemas/index.js";
 
 export const createUser = async (request, response) => {
   const { body } = request;
-
+  console.log(body);
   try {
     const validator = await createUserSchema();
     const { error, value } = validator.validate(body);
